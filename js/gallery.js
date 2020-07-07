@@ -87,6 +87,6 @@ function changeImg(changeDir) {
         nextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
 
         let prevBtn = document.querySelector(".img-btn-prev");
-        nextBtn.style.cssText = "left: " + calcImgToEdge + "px;";
+        prevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
     }
 }
