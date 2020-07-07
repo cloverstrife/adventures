@@ -117,4 +117,6 @@ body{
 #footer {
     background-color: #25384f;
     color: #fff;
+    bottom: 0;
+    position: static;
 }
