@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Josh's Adventures</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russia Adventures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/russia.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
 </head>
 <body>
-    
+    <header id="main-header">
+        <div class="container">
+                <h1 class="display-1">Adventures<br>in<br>Russia</h1>
+        </div>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <div class="row">
+                <div id="col" class="col-sm-12 my-auto">
+                    <ul>    
+                        <li><a class="button" href="index.html">Home</a></li>
+                                <div class="dropdown">
+                                    <button onclick="drop()" class="dropbtn">My Adventures &#8964</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="russia.html">Russia</a>
+                                        <a href="ireland.html">Ireland</a>
+                                        <a href="germany.html">Germany & Austria</a>
+                                    </div>
+                                </div>
+                                <script src="js/index.js"></script>             
+                            <li><a class="button" href="#">Videos</a></li>
+                            <li><a class="button" href="gallery.html">Pictures</a></li>
+                            <li><a class="button" href="#">Your Adventures</a></li>
+                            <li><a class="button" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" id="sidebar"></div>
+            <div class="col-md-9" id="blog">
+                <h2>March 2014</h2>
+                <h1>My First Trip to Russia</h1>
+                <p>This was my first and worst trip abroad. It seemed like everything went wrong. Mostly
+                    I just had bad luck but I could have avoided a lot of things if I had known more then.
+                    Perhaps traveling to Russia first was a bad idea but bad ideas are usually fun.
+                    Even though it was not a great trip it has given me my best travel story. 
+                    It doesn't matter how many marathons I have ran overseas or all the majestic  mountains 
+                    I've seen. THE story everyone always wants me to tell is about what happened inside 
+                    that Russian hotel on my first trip.
+
+                    <br><br>
+                    I planned out my trip months in advance. I first got a passport then booked a flight
+                    and hotel through Orbitz. Then I went through itseasy.com for a visa cause as an American
+                    citizen you need a tourist visa to visit (unless you stop there on a cruise ship). I 
+                    notified my bank that I was traveling to Russia so they would not freeze my account
+                    for suspicious activity. However apparently you need to contact the credit card department 
+                    and the debit card department if you plan to use both (I only contacted the credit card 
+                    department). I also contacted my phone provider to hook me up with a travel package so I 
+                    would have phone service at a reasonable price.
+                    
+                    <br><br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul>
+                            <li>Copyright 2020</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

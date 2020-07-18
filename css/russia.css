@@ -1,0 +1,39 @@
+body{
+    background-image: url('../images/rbackground.JPG');
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+#main-header{
+    background-image: url('../images/rrheader.JPG') ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    min-height: 300px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px black;    
+}
+
+#blog {
+    background: #333;
+    color: #fff;
+    opacity: .75;
+}
+
+#sidebar{
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/skelligme.JPG');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
