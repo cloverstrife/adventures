@@ -1,10 +1,11 @@
 <?php
+  include('includes/starter.php');
   $header_text = "Josh's\nAdventures";
+  $header_image = 'images/header.JPG';
   include('includes/header.php');
-
  ?>
 <div class="col-sm" id="sidebar"></div>
-<div class="col-sm-9" id="aboutme">
+<div class="col-sm-9 main-body" id="aboutme">
     <h1>A little about me.</h1>
     <p>     I am Josh Albrecht and welcome to my site. I'm from the St. Louis area right smack
         dab in the middle of the USA. When I was a child in the 1980s I wanted to be an

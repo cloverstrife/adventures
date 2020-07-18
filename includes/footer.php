@@ -12,5 +12,6 @@
 </div>
 </footer>
 <!-- javascript goes here -->
+<script src="js/gallery.js"></script>
 </body>
 </html>

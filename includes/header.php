@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
-    <header id="main-header">
+    <header id="main-header" style="background-image: url('<?=$header_image?>');">
         <div class="container">
                 <h1 class="display-1"><?= nl2br($header_text)?></h1>
         </div>

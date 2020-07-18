@@ -10,7 +10,6 @@ body{
 }
 
 #main-header{
-    background-image: url('../images/rrheader.JPG') ;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -21,10 +20,12 @@ body{
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
     text-align: center;
-    text-shadow: 2px 2px black;    
+    text-shadow: 2px 2px black;
 }
 
-#blog {
+
+
+.main-body {
     background: #333;
     color: #fff;
     opacity: .75;

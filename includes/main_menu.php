@@ -1,3 +1,8 @@
+<?php
+  $db = DB::getInstance();
+  $sql = "SELECT * FROM adventures";
+  $menuItems = $db->query($sql)->fetchAll(PDO::FETCH_OBJ);
+?>
 <nav id="navbar">
     <div class="container">
         <div class="row">
@@ -7,9 +12,9 @@
                             <div class="dropdown">
                                 <button onclick="drop()" class="dropbtn">My Adventures</button>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="russia.php">Russia</a>
-                                    <a href="ireland.php">Ireland</a>
-                                    <a href="germany.php">Germany & Austria</a>
+                                  <?php foreach($menuItems as $menu): ?>
+                                    <a href="adventures.php?id=<?= $menu->id ?>"><?= $menu->menu_text ?></a>
+                                  <?php endforeach;?>
                                 </div>
                             </div>
                             <script src="js/index.js"></script>

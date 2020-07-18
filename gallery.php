@@ -1,68 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Image Gallery</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-</head>
-<body>
-    <header id="main-header">
-        <h1 class="display-1">Image <br> Gallery</h1>   
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <div class="row">
-                <div id="col" class="col-sm-12 my-auto">
-                    <ul>    
-                        <li><a class="button" href="index.html">Home</a></li>
-                                <div class="dropdown">
-                                    <button onclick="drop()" class="dropbtn">My Adventures &#8964</button>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <a href="russia.html">Russia</a>
-                                        <a href="ireland.html">Ireland</a>
-                                        <a href="germany.html">Germany & Austria</a>
-                                    </div>
-                                </div>
-                                <script src="js/index.js"></script>             
-                            <li><a class="button" href="#">Videos</a></li>
-                            <li><a class="button" href="gallery.html">Pictures</a></li>
-                            <li><a class="button" href="#">Your Adventures</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<?php
+  include('includes/starter.php');
+  $db = DB::getInstance();
+  $sql = "SELECT * FROM gallery";
+  $images = $db->query($sql)->fetchAll(PDO::FETCH_OBJ);
+  $header_text = "Image\nGallery";
+  $header_image = 'images/header.JPG';
+  include('includes/header.php');
+?>
 
     <div class="container-fluid">
          <section id="index-gallery">
-            <div class="row"> 
+            <div class="row">
+              <?php foreach($images as $image): ?>
                 <div id="col" class="col-md-3">
-                    <div class="gallery-img img1">
-                        <div><a href="#">Saint Petersburg <br> Russia</a></div>
+                    <div class="gallery-img">
+                      <div class="gallery-img-wrapper">
+                        <img src="<?=$image->url?>" alt="<?=$image->alt_text?>" />
+                      </div>
+                      <div class="hover-text-wrapper"><a href="#"><?= $image->link_text?></a></div>
                     </div>
                 </div>
-                <div id="col" class="col-md-3">
-                    <div class="gallery-img img2">
-                        <div><a href="#">Saint Petersburg <br> Russia</a></div>
-                    </div>
-                </div>
-                <div id="col" class="col-md-3">
-                    <div class="gallery-img img3">
-                        <div><a href="#">Saint Petersburg <br> Russia</a></div>
-                    </div>
-                </div>
-                <div id="col" class="col-md-3">
-                    <div class="gallery-img img4">
-                        <div><a href="#">Bavaria <br> Germany</a></div>
-                    </div>
-                </div>
+              <?php endforeach; ?>
+              <!-- start add to db and delete -->
                 <div id="col" class="col-md-3">
                     <div class="gallery-img img5">
                         <div><a href="#">Bavaria <br> Germany</a></div>
@@ -147,24 +106,8 @@
                         <div><a href="#">County Antrim <br> Ireland</a></div>
                     </div>
                 </div>
+                <!-- end add to db and delete -->
             </div>
-        </section>  
+        </section>
     </div>
-
-    <script src="js/gallery.js"></script>
-    
-    <div class="footerfix"></div>
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul>
-                        <li>Copyright 2020</li>
-                    </ul>
-                </div> 
-            </div>
-        </div>
-    </footer>
-    
-</body>
-</html>
+  <?php include('includes/footer.php'); ?>

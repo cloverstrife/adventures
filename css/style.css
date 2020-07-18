@@ -10,7 +10,6 @@ body{
 }
 
 #main-header{
-    background-image: url('../images/header.JPG') ;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -21,12 +20,12 @@ body{
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
     text-align: center;
-    text-shadow: 2px 2px black;    
+    text-shadow: 2px 2px black;
 }
 
 
 
-#aboutme{
+#aboutme, .main-body{
     background: #333;
     color: #fff;
     opacity: .75;
@@ -39,4 +38,3 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
 }
-

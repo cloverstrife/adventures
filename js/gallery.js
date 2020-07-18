@@ -6,10 +6,10 @@ if(galleryImages) {
     galleryImages.forEach(function(image, index) {
         image.onclick = function() {
             let getElementCss = window.getComputedStyle(image);
-            let getFullImgUrl = getElementCss.getPropertyValue("background-image");
-            let getImgUrlPos = getFullImgUrl.split("/images/thumbs/");
-            let setNewImgUrl = getImgUrlPos[1].replace('")', '');
-            
+            let actualImg = image.querySelector('img');
+
+            let getFullImgUrl = actualImg.getAttribute("src");
+            let setNewImgUrl = getFullImgUrl.replace('thumbs', 'gallery');
             getLatestOpenedImg = index + 1;
 
             let container = document.body;
@@ -20,7 +20,7 @@ if(galleryImages) {
 
             let newImg = document.createElement("img");
             newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src", "images/" + setNewImgUrl);
+            newImg.setAttribute("src", setNewImgUrl);
             newImg.setAttribute("id", "current-img");
 
             newImg.onload = function() {
@@ -34,7 +34,7 @@ if(galleryImages) {
                 newNextBtn.setAttribute("class", "img-btn-next");
                 newNextBtn.setAttribute("onclick", "changeImg(1)");
                 newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
-    
+
                 let newPrevBtn = document.createElement("a");
                 let btnPrevText = document.createTextNode("Prev");
                 newPrevBtn.appendChild(btnPrevText);
@@ -43,7 +43,7 @@ if(galleryImages) {
                 newPrevBtn.setAttribute("onclick", "changeImg(0)");
                 newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
             }
-        }     
+        }
     });
 }
 
@@ -72,9 +72,9 @@ function changeImg(changeDir) {
         if(calcNewImg < 1) {
             calcNewImg = galleryImages.length;
         }
-    
+
     }
-    newImg.setAttribute("src", "images/img" + calcNewImg + ".JPG");
+    newImg.setAttribute("src", "images/gallery/img" + calcNewImg + ".JPG");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;
