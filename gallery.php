@@ -13,7 +13,7 @@
             <div class="row">
               <?php foreach($images as $image): ?>
                 <div id="col" class="col-md-3">
-                    <div class="gallery-img">
+                    <div class="gallery-img img-fluid">
                       <div class="gallery-img-wrapper">
                         <img src="<?=$image->url?>" alt="<?=$image->alt_text?>" />
                       </div>

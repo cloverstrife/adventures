@@ -3,6 +3,12 @@
   $header_text = "Josh's\nAdventures";
   $header_image = 'images/header.JPG';
   include('includes/header.php');
+  /*if (isset($_SESSION['userId'])) {
+    echo '<p class="login-status">You are logged in!</p>';
+  }
+  else {
+    echo '<p class="login-status">You are logged out!</p>';
+  }*/
  ?>
 <div class="col-sm" id="sidebar"></div>
 <div class="col-sm-9 main-body" id="aboutme">
