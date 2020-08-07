@@ -1,6 +1,6 @@
 <?php
   $db = DB::getInstance();
-  $sql = "SELECT * FROM adventures";
+  $sql = "SELECT * FROM adventures WHERE active = 1";
   $menuItems = $db->query($sql)->fetchAll(PDO::FETCH_OBJ);
 ?>
 <nav id="navbar">
@@ -24,7 +24,7 @@
                         <li><a class="button" href="#">Contact</a></li>
                         <li>
                           <div>
-                            <?php 
+                            <?php
                               if (isset($_SESSION['userId'])) {
                                 echo '<form action="includes/logout.inc.php" method="post">
                                 <button type="submit" name="logout-submit" class="dropbtn">Logout</button>
@@ -39,8 +39,8 @@
                               <a href="signup.php">Sign up</a>';
                               }
                             ?>
-                            
-                          
+
+
                           </div>
                         </li>
                 </ul>

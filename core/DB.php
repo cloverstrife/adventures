@@ -13,4 +13,47 @@ class DB {
     }
     return self::$dbh;
   }
+
+  // $values = ["header" => "value", "body" => "body value"];
+  public static function insert($table, $values) {
+
+    $columns = [];
+
+    foreach($values as $column => $value) {
+      $columns[] = $column;
+    }
+
+    $headerString = implode("`,`", $columns);
+    $valueString = implode(", :", $columns);
+
+    $sql = "INSERT INTO {$table} (`{$headerString}`) VALUES (:{$valueString});";
+    $db = self::getInstance();
+    $stmt = $db->prepare($sql);
+    return $stmt->execute($values);
+  }
+
+  public static function update($table, $id, $values) {
+
+    $valueString = "";
+
+    foreach($values as $column => $value) {
+      $valueString .= ", `{$column}` = :{$column}";
+    }
+
+    $valueString = ltrim($valueString, ", ");
+    $values['id'] = $id;
+
+    $sql = "UPDATE {$table} SET $valueString WHERE id = :id;";
+    $db = self::getInstance();
+    $stmt = $db->prepare($sql);
+    return $stmt->execute($values);
+  }
+
+  public static function delete($table, $id) {
+
+    $sql = "DELETE FROM {$table} WHERE id = :id;";
+    $db = self::getInstance();
+    $stmt = $db->prepare($sql);
+    return $stmt->execute(['id' => $id]);
+  }
 }
