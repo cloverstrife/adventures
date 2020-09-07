@@ -19,9 +19,9 @@
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
-    <header id="main-header" style="background-image: url('<?=$header_image?>');">
+    <header id="main-header" class="jumbotron mb-0" style="background-image: url('<?=$header_image?>');">
         <div class="container">
-                <h1 class="display-1"><?= nl2br($header_text)?></h1>
+                <h1 class="display-1"><?=($header_text)?></h1>
         </div>
     </header>
     <?php include('includes/main_menu.php'); ?>

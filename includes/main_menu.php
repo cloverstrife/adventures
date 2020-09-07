@@ -10,7 +10,7 @@
                 <ul>
                     <li><a class="button" href="index.php">Home</a></li>
                             <div class="dropdown">
-                                <button onclick="drop()" class="dropbtn">My Adventures</button>
+                                <button onclick="drop()" class="dropbtn">Adventures</button>
                                 <div id="myDropdown" class="dropdown-content">
                                   <?php foreach($menuItems as $menu): ?>
                                     <a href="adventures.php?id=<?= $menu->id ?>"><?= $menu->menu_text ?></a>
@@ -18,10 +18,10 @@
                                 </div>
                             </div>
                             <script src="js/index.js"></script>
-                        <li><a class="button" href="#">Videos</a></li>
+                        <li><a class="button" href="videos.php">Videos</a></li>
                         <li><a class="button" href="gallery.php">Pictures</a></li>
-                        <li><a class="button" href="#">Your Adventures</a></li>
-                        <li><a class="button" href="#">Contact</a></li>
+                        <li><a class="button" href="#">Share Your Adventures</a></li>
+                        <li><a class="button" href="contact.php">Contact</a></li>
                         <li>
                           <div>
                             <?php

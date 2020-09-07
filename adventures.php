@@ -10,8 +10,7 @@
   $header_image = $adventure->header_image;
   include 'includes/header.php';
  ?>
-<div class="col-sm" id="sidebar"></div>
-<div class="col-md-9 main-body" id="blog">
+<div class="col-12 main-body" id="blog">
     <?= html_entity_decode($adventure->body); ?>
 </div>
 <?php include 'includes/footer.php'; ?>
