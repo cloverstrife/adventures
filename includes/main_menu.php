@@ -20,9 +20,9 @@
                             <script src="js/index.js"></script>
                         <li><a class="button" href="videos.php">Videos</a></li>
                         <li><a class="button" href="gallery.php">Pictures</a></li>
-                        <li><a class="button" href="#">Share Your Adventures</a></li>
-                        <li><a class="button" href="contact.php">Contact</a></li>
-                        <li>
+                        <!--<li><a class="button" href="#">Share Your Adventures</a></li>-->
+                        <!--<li><a class="button" href="contact.php">Contact</a></li>-->
+                        <!--<li>
                           <div>
                             <?php
                               if (isset($_SESSION['userId'])) {
@@ -39,10 +39,8 @@
                               <a href="signup.php">Sign up</a>';
                               }
                             ?>
-
-
                           </div>
-                        </li>
+                        </li>-->
                 </ul>
             </div>
         </div>
